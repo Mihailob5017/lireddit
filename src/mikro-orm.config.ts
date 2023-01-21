@@ -2,6 +2,7 @@ import { Post } from './entities/Post';
 import { __prod__ } from './cosnstants';
 import { MikroORM } from '@mikro-orm/postgresql';
 import path from 'path';
+import { User } from './entities/User';
 
 export default {
 	migrations: {
@@ -14,5 +15,5 @@ export default {
 	allowGlobalContext: true,
 	user: 'postgres',
 	password: 'jsmv4183',
-	entities: [Post],
+	entities: [Post, User],
 } as Parameters<typeof MikroORM.init>[0];
